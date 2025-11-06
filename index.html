@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Elite Hub – Tops IA 2025</title>
+  <style>
+    body{font:16px Arial;background:#111;color:#0f0;margin:0}
+    header{background:#000;padding:20px;text-align:center}
+    nav{background:#222;padding:15px}
+    nav a{color:#0f0;margin:15px;text-decoration:none;font-weight:bold}
+    .top{background:#222;margin:20px;padding:20px;border-radius:15px}
+    .card{background:#333;padding:15px;margin:10px 0;border-radius:10px}
+    button{background:#0f0;color:#000;border:0;padding:8px 15px;margin:5px;cursor:pointer;border-radius:5px}
+    .share button{background:#08f;color:#fff}
+    #visitas{position:fixed;bottom:10px;left:10px;font-size:10px}
+    .ads{background:#444;height:90px;margin:20px 0;text-align:center;line-height:90px;color:#aaa}
+  </style>
+  <script>
+    let v = +localStorage.getItem('visitas')||0; v++; localStorage.setItem('visitas',v);
+    document.getElementById('visitas').innerText='Visitas: '+v;
+    function vote(id,d){let e=document.getElementById(id); e.innerText=+e.innerText+d;}
+  </script>
+</head>
+<body>
+<header><h1>AI Elite Hub</h1></header>
+<nav>
+  <a href="#finanzas">Finanzas</a>
+  <a href="#imagenes">Imágenes</a>
+  <a href="#videos">Vídeos</a>
+  <a href="#novedades">Novedades</a>
+</nav>
+
+<div id="finanzas" class="top">
+  <h2>Top 20 AI para Finanzas</h2>
+  <div class="card">1. <a href="https://datasnipper.com" target="_blank">DataSnipper</a> – PDF a Excel en 3 seg 
+    <button onclick="vote('v1',1)">↑</button><span id="v1">0</span><button onclick="vote('v1',-1)">↓</button>
+    <button onclick="location.href='#detalle1'">Más Info</button>
+    <div class="share">
+      <button onclick="navigator.share?.({title:'DataSnipper',url:location.href})">X</button>
+      <button onclick="navigator.share?.({title:'DataSnipper',url:location.href})">Insta</button>
+    </div>
+  </div>
+  <div class="card">2. <a href="https://truewind.ai">Truewind</a> – Contabilidad 100 % IA</div>
+  <div class="card">3. <a href="https://workiva.com">Workiva</a> – Reportes en tiempo real</div>
+  <!-- 17 más (los añado abajo en 5 seg si quieres) -->
+</div>
+
+<div id="novedades" class="top">
+  <h2>Novedades 6-nov-2025</h2>
+  <ul>
+    <li>Nvidia alcanza 5 billones € (Reuters)</li>
+    <li>OpenAI firma 38 000 M$ con AWS (TechCrunch)</li>
+    <li>Qualcomm humilla a Nvidia con chip AI200</li>
+    <li>WEF avisa burbuja IA</li>
+  </ul>
+</div>
+
+<div class="ads">AQUÍ VA TU ADSENSE (pega tu código)</div>
+<div id="visitas">Visitas: 0</div>
+</body>
+</html>
